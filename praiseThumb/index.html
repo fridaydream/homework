@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #b0c7b0;
+}
+
+.box-warp {
+    width: 400px;
+    height: 200px;
+
+    margin: 100px auto;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.box-warp>div {
+    flex: 1;
+}
+
+.box-warp>div:nth-child(1) {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 140px;
+    margin-top: 30px;
+    transform: translateX(14px);
+    background: #f8c8ab;
+}
+
+.box-warp>div:nth-child(2) {
+    height: 200px;
+}
+
+.fingerAll {}
+
+.fingerAll>div {
+    height: 50px;
+    background: #f8c8ab;
+    /*border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;*/
+    border-radius: 20px;
+}
+
+.fingerTwo {
+    position: relative;
+}
+
+.fingerTwo .fingerBig {
+    position: absolute;
+    width: 66%;
+    height: 100%;
+    border-radius: 20px;
+    -webkit-transform: rotate(-50deg) translateX(-20px) translateY(14px);
+    -webkit-transform-origin: 0 0;
+    background: #f8c8ab;
+}
+</style>
+
+<body>
+    <div class="box-warp">
+        <div>
+        </div>
+        <div class="fingerAll">
+            <div class="fingerTwo">
+                <div class="fingerBig">
+                </div>
+            </div>
+            <div class="fingerThree"></div>
+            <div class="fingerFour"></div>
+            <div class="fingerFive"></div>
+        </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/systemjs/0.20.2/system.js"></script>
+    <script src="index.js"></script>
+    <!-- <script src="/scripts/thumb-es.js"></script> -->
+    <script>
+    SystemJS.config({
+        baseURL: '/PraiseThumb/scripts'
+    });
+
+    SystemJS.import('./scripts/index-es.js').then(function(m) {
+    	$.extend({
+    		thumb:m.default.Thumb
+    	});
+    	// callBack();
+    	var f=new $.thumb(0,$('.fingerBig'));
+    	f.clickAction();
+    });
+    
+    </script>
+</body>
+<script>
+</script>
+
+</html>
