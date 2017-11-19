@@ -1,0 +1,35 @@
+{% extends 'layout.html' %} {% block title %}My Page{% endblock %} {% block head %} {% parent %}
+<link rel="stylesheet" href="../styles/index.css">
+<script src="../scripts/index.js"></script>
+{% endblock %} {% block content %}
+<div class="box-warp">
+    <div>
+    </div>
+    <div class="fingerAll">
+        <div class="fingerTwo">
+            <div class="fingerBig" id="fingerBig">
+            </div>
+        </div>
+        <div class="fingerThree"></div>
+        <div class="fingerFour"></div>
+        <div class="fingerFive"></div>
+    </div>
+</div>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/systemjs/0.20.2/system.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.17.1/axios.min.js"></script>
+<script>
+SystemJS.config({
+    baseURL: '/scripts'
+});
+
+SystemJS.import('index.es.js').then(function(m) {
+    $.extend({
+        thumb: m.default.Thumb
+    });
+    // callBack();
+    var f = new $.thumb(0, $('.fingerBig'));
+    f.clickAction();
+});
+</script>
+{% endblock %}
