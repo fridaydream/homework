@@ -1,0 +1,12 @@
+CACHE MANIFEST
+# Time: Mon Dec 18 2017 00:50:37 GMT+0800 (CST)
+# koatesting
+
+CACHE:
+../public/css/vendor.css
+../public/scripts/common/vendor.min.js
+../public/scripts/tags.js
+../public/scripts/index.js
+
+NETWORK:
+*
