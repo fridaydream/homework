@@ -1,1 +1,35 @@
-{% extends './layout.html' %}{% block title %}My Page{% endblock %}{% block styles %}<link rel="stylesheet" type="text/css" href="../public/styles/vendor-b0b59.css"/>{% endblock %}{% block content %}{% include '../widget/index.html' %}{% endblock %}{% block script %}<script type='text/javascript'  src='../public/scripts/common/vendor-b0b59.min.js'></script><script type='text/javascript'  src='../public/scripts/index-b0b59.js'></script><script type='text/javascript'  src='../public/scripts/tags-b0b59.js'></script>{% endblock %}
+Html Webpack Plugin:
+<pre>
+  TypeError: Cannot read property 'entry' of undefined
+  
+  - index.js:120 module.exports
+    /Users/chenpan/Documents/homework/homework/praiseThumb_third_week/src/views/    index.js:120:90
+  
+  - index.js:88 module.exports
+    /Users/chenpan/Documents/homework/homework/praiseThumb_third_week/src/views/    index.js:88:47
+  
+  - index.js:265 
+    [praiseThumb_third_week]/[html-webpack-plugin]/index.js:265:16
+  
+  - util.js:16 tryCatcher
+    [praiseThumb_third_week]/[bluebird]/js/release/util.js:16:23
+  
+  - promise.js:512 Promise._settlePromiseFromHandler
+    [praiseThumb_third_week]/[bluebird]/js/release/promise.js:512:31
+  
+  - promise.js:569 Promise._settlePromise
+    [praiseThumb_third_week]/[bluebird]/js/release/promise.js:569:18
+  
+  - promise.js:606 Promise._settlePromiseCtx
+    [praiseThumb_third_week]/[bluebird]/js/release/promise.js:606:10
+  
+  - async.js:138 Async._drainQueue
+    [praiseThumb_third_week]/[bluebird]/js/release/async.js:138:12
+  
+  - async.js:143 Async._drainQueues
+    [praiseThumb_third_week]/[bluebird]/js/release/async.js:143:10
+  
+  - async.js:17 Immediate.Async.drainQueues
+    [praiseThumb_third_week]/[bluebird]/js/release/async.js:17:14
+  
+</pre>

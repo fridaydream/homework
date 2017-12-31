@@ -1,0 +1,41 @@
+div{
+	margin:0;
+	padding:0;
+}
+body{
+	background-image: url(images/bg.jpg);
+}
+.container{
+	margin:0 auto 0 auto;
+	width: 8.0625rem;
+	
+}
+.pers{
+	animation:pers 4s both;
+	-webkit-animation:pers 4s both;
+}
+@keyframes pers{
+	0%{
+		perspective: 5rem;
+	}
+	100%{
+		perspective: 25rem;
+	}
+}
+@-webkit-keyframes pers{
+	0%{
+		perspective: 5rem;
+	}
+	100%{
+		perspective: 25rem;
+	}
+}
+#box{
+	-webkit-transform-style:preserve-3d;
+	-webkit-perspective-origin:50% 50%;
+}
+#box>div{
+	position: absolute;
+	width: 8.0625rem;
+	height: 73.125rem;
+}

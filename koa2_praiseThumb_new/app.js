@@ -19,3 +19,5 @@ app.context.render = co.wrap(render({
 app.use(serve(Config.get('staticDir')));
 app.listen(Config.get('port'));
 module.exports=app;
+
+

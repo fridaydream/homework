@@ -30,6 +30,7 @@
     "request-promise": "^4.2.2",
     "selenium-standalone": "^6.11.0",
     "selenium-webdriver": "^3.6.0",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "thunkify": "^2.1.2"
   }
 }
