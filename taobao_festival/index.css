@@ -8,25 +8,26 @@ body{
 .container{
 	margin:0 auto 0 auto;
 	width: 8.0625rem;
+	perspective: 25rem;
 	
 }
-.pers{
-	animation:pers 4s both;
-	-webkit-animation:pers 4s both;
+.per{
+	animation:pers 6s forwards;
+	-webkit-animation:pers 6s forwards;
 }
 @keyframes pers{
-	0%{
+	from{
 		perspective: 5rem;
 	}
-	100%{
+	to{
 		perspective: 25rem;
 	}
 }
 @-webkit-keyframes pers{
-	0%{
+	from{
 		perspective: 5rem;
 	}
-	100%{
+	to{
 		perspective: 25rem;
 	}
 }
